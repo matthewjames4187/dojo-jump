@@ -62,9 +62,16 @@ jobs:
                 aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
                 aws-region: ${{ env.AWS_REGION }}
                 
+            - name: Set up Elastic Beanstalk config
+              run: |
+                export AWS_DEFAULT_REGION=${{ env.AWS_REGION }}
+                export AWS_EB_APP_NAME=dojo-jump-app
+                export AWS_EB_ENV_NAME=dojo-jump-env
+                export AWS_EB_REGION=${{ env.AWS_REGION }}
+              
             - name: Init Elastic Beanstalk
               run: |
-                echo n | eb init -r ${{ env.AWS_REGION }}
+                echo n | eb init
                 
             - name: Deploy to Elastic Beanstalk
               run: |
