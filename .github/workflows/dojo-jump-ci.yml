@@ -64,7 +64,7 @@ jobs:
                 
             - name: Init Elastic Beanstalk
               run: |
-                echo n | eb init 
+                echo n | eb init -r ${{ env.AWS_REGION }}
                 
             - name: Deploy to Elastic Beanstalk
               run: |
