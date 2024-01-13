@@ -1,0 +1,10 @@
+branch-defaults:
+  main:
+    environment: dojo-jump-env
+
+global:
+  AWS_DEFAULT_REGION: us-east-2
+  AWS_EB_APP_NAME: dojo-jump-app
+  AWS_EB_ENV_NAME: dojo-jump-env
+  AWS_EB_REGION: us-east-2
+                
