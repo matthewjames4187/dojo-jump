@@ -64,7 +64,7 @@ jobs:
               
             - name: Init Elastic Beanstalk
               run: |
-                echo n | eb init -c config.yml
+                echo n | eb init
                 
             - name: Deploy to Elastic Beanstalk
               run: |
