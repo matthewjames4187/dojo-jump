@@ -64,7 +64,7 @@ jobs:
               
             - name: Init Elastic Beanstalk
               run: |
-                echo n | eb init
+                echo n | eb init -r us-east-2 -a dojo-jump-app -e dojo-jump-env
                 
             - name: Deploy to Elastic Beanstalk
               run: |
