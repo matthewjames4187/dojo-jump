@@ -1,10 +1,17 @@
 branch-defaults:
   main:
     environment: dojo-jump-env
-
 global:
-  AWS_DEFAULT_REGION: us-east-2
-  AWS_EB_APP_NAME: dojo-jump-app
-  AWS_EB_ENV_NAME: dojo-jump-env
-  AWS_EB_REGION: us-east-2
-                
+  application_name: dojo-jump-app
+  branch: null
+  default_ec2_keyname: null
+  default_platform: Docker running on 64bit Amazon Linux 2
+  default_region: us-east-2
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: null
+  repository: null
+  sc: git
+  workspace_type: Application
